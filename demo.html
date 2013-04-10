@@ -1,0 +1,104 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>jqueryui-btnpickers demo</title>
+
+<script src="scripts/jquery-1.9.1.min.js"></script>  
+<script src="scripts/jquery-ui/ui/jquery-ui.js"></script>
+<script type="text/javascript" src="scripts/jqueryui-btnpickers.js"></script>
+<link rel="stylesheet" href="scripts/jquery-ui/themes/base/jquery-ui.css" />  
+
+<style>
+	body {
+		font-family:Helvetica, Arial, Verdana !important;
+		font-size:10pt;
+		margin:0px;
+	}
+
+	.ui-tabs-panel {
+		padding:4px !important;
+	}
+	
+	#pnlsettings {	}
+	#pnlsettings input[type=text],
+	#pnlsettings textarea,
+	#pnlsettings select {
+		font-family:Helvetica, Arial, Verdana !important;
+		padding:4px;
+		width:120px;
+		min-width:auto;
+		max-width:auto;
+		font-size:10pt;
+	}
+	#pnlsettings input[type=checkbox] {
+		padding:4px;
+	}
+	#pnlsettings div.inputdiv {
+		clear:both;
+		margin-top:5px;
+		margin-bottom:5px;
+	}
+	#pnlsettings label {		
+		float:left;
+		font-size:10pt;
+		line-height:12pt;
+		padding:5px;
+		width:150px;
+	}
+
+</style>
+<script type="text/javascript">
+	var btnui=null;
+	
+	function initcontrols() {
+			if (!btnui) {
+				btnui = new btneditors();
+			}
+			if (btnui.pickerpanel) {
+				btnui.pickerpanel.remove();
+				btnui.pickerpanel=null;
+				btnui.pickerbinding=null;
+			}
+			btnui.init($("#pnltest"));
+	}
+	$(document).ready(function () {
+		initcontrols();
+	});
+	
+</script>
+</head>
+<body>
+	<div style="padding:25px; padding-top:5px; background:#f0f0f0; border-bottom:2px solid #dedede;">
+		<h1>jqueryui-btnpickers demo</h1>
+		<textarea  id="txtdbg" style="display:none; width:800px; height:200px;"></textarea>
+		<div id="dbg" style="display:none; margin-left:30px;">Debugger Messages</div>
+		<div>
+			<table width="100%"><tr><td valign="top">
+			</td><td valign="top">
+				<b>Tested Browser Support : </b> IE 9.0 +, Chrome v26<br/>
+			</td><td width="160" style="padding-left:30px;" valign="top">
+				<a href="http://github.com/cemguler/jqueryui-btnpickers">Download or View Source</a>
+			</td></tr>
+			</table>
+		</div>
+	</div>
+	<br/>
+	
+	<div id="pnltest" style="background-color:#ffffff; padding:0px; display:block;overflow:hidden; min-height:20px; clear:both; margin:30px; margin-top:10px; ">
+	
+		Color Picker<br/>
+		<input id="txtcolor" type="btncolor" value="#ff0000">
+		<br/><br/>
+		Font Picker<br/>
+		<input id="txtfont" type="btnfont" value="" style="width:400px;">
+		<br/><br/>
+		Padding Picker<br/>
+		<input id="txtpadding" type="btnpadding" value="" style="width:200px;">
+		<br/><br/>
+		Margin Picker<br/>
+		<input id="txtmargin" type="btnmargin" value="" style="width:200px;">
+		
+	</div>
+	
+</body>
+</html>
