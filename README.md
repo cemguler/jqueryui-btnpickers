@@ -3,7 +3,7 @@ jqueryui-btnpickers
 
 Color Picker, Font Picker, Padding Picker, Margin Picker
 
-[DEMO] http://www.netsunum.com/jqueryui-btnpickers/demo.html
+[DEMO Page](http://www.netsunum.com/jqueryui-btnpickers/demo.html)
 
 Requirements
 ------------------
